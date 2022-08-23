@@ -50,6 +50,20 @@ html{
     right: 0;
 }
 
+.gfg
+{
+    position: absolute;
+    bottom: 140px;
+    right: 0;
+}
+
+.leetcode
+{
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+}
+
 .facebook
 {
     position: absolute;
