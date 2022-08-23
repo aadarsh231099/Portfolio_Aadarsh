@@ -64,6 +64,19 @@ html{
     right: 0;
 }
 
+.twitter
+{
+    position: absolute;
+    bottom: 75px;
+    left: 0;
+}
+.snapchat
+{
+    position: absolute;
+    bottom: 140px;
+    left: 0;
+}
+
 .facebook
 {
     position: absolute;
