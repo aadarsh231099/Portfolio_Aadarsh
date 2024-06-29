@@ -77,22 +77,22 @@ html{
     left: 0;
 }
 
-.facebook
-{
-    position: absolute;
-    bottom: 205px;
-    left: 0;
-}
-.linkedin
+.discord
 {
     position: absolute;
     bottom: 270px;
     left: 0;
 }
-.instagram
+.linkedin
 {
     position: absolute;
     bottom: 335px;
+    left: 0;
+}
+.instagram
+{
+    position: absolute;
+    bottom: 205px;
     left: 0;
 }
 .github
@@ -296,7 +296,6 @@ section .title::after{
     margin-left: 360px;
 }
 .home .home-content .text-3 span{
-    ;
     color: darkcyan;
     font-weight: 800;
 }
@@ -318,6 +317,7 @@ section .title::after{
 }
 
 /* about section styling */
+
 .about .title::after{
     content: "Who Am I?";
 }
@@ -325,7 +325,7 @@ section .title::after{
     width: 45%;
 }
 .about .about-content .left img{
-    height: 400px;
+    height: 480px;
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
@@ -336,7 +336,8 @@ section .title::after{
 .about .about-content .right .text{
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
 }
 .about .about-content .right .text span{
     color: darkcyan;
@@ -344,7 +345,7 @@ section .title::after{
 .about .about-content .right p{
     text-align: justify;
 }
-.about .about-content .right a{
+.about .about-content .right a.cv{
     display: inline-block;
     background: darkcyan;
     color: #fff;
@@ -356,7 +357,11 @@ section .title::after{
     border: 2px solid darkcyan;
     transition: all 0.3s ease;
 }
-.about .about-content .right a:hover{
+.about .about-content .right a.company-link {
+    color: darkcyan;
+    font-weight: bold;
+}
+.about .about-content .right a.cv:hover{
     color: darkcyan;
     background: none;
 }
@@ -373,7 +378,7 @@ section .title::after{
 .projects .title::after,
 .teams .title::after{
     background: #111;
-    content: "That I've Done";
+    content: "Developed";
 }
 .projects .serv-content .card{
     width: calc(33% - 20px);
