@@ -265,56 +265,121 @@ section .title::after{
 
 
 /* home section styling */
-.home{
-    display: flex;
-    background: url("images/gifa (18).gif") no-repeat center;
-    height: 100vh;
-    color: #fff;
-    min-height: 500px;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("images/gifa (18).gif") no-repeat center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  padding: 0 20px;
 }
-.home .max-width{
+
+.home .max-width {
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.home .max-width .row{
-  margin-right: 0;
+
+.home .home-content {
+  max-width: 900px;
+  width: 100%;
 }
-.home .home-content .text-1{
-    font-size: 27px;
-    margin-left: 370px;
+
+.home .home-content .text-1 {
+  font-size: 27px;
+  margin-bottom: 10px;
 }
-.home .home-content .text-2{
-    font-size: 75px;
-    font-weight: 600;
-    margin-left: 360px ;
+
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
-.home .home-content .text-3{
-    font-size: 40px;
-    margin-left: 360px;
+
+.home .home-content .text-3 {
+  font-size: 40px;
 }
-.home .home-content .text-3 span{
-    color: darkcyan;
-    font-weight: 800;
+
+.home .home-content .text-3 span {
+  color: darkcyan;
+  font-weight: 800;
 }
-.home .home-content a{
-    display: inline-block;
-    background: darkcyan;
-    color: #fff;
-    font-size: 25px;
-    padding: 12px 36px;
-    margin-top: 20px;
-    font-weight: 400;
-    border-radius: 6px;
-    border: 2px solid darkcyan;
-    transition: all 0.3s ease;
+
+.home .home-content a {
+  display: inline-block;
+  background: darkcyan;
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid darkcyan;
+  transition: all 0.3s ease;
 }
-.home .home-content a:hover{
-    color: darkcyan;
-    background: none;
+
+.home .home-content a:hover {
+  color: darkcyan;
+  background: none;
 }
+
+/* SOCIAL ICONS */
+.home .home-content div a span {
+  font-size: 28px;
+  margin: 10px 6px;
+  color: white;
+  transition: 0.3s ease;
+}
+.home .home-content div a:hover span {
+  color: darkcyan;
+}
+
+/* MOBILE STYLING */
+@media (max-width: 768px) {
+  .home .home-content .text-2 {
+    font-size: 48px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 28px;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 20px;
+  }
+
+  .home .home-content a {
+    font-size: 18px;
+    padding: 10px 28px;
+  }
+
+  .home .home-content div a span {
+    font-size: 24px;
+    margin: 6px 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home .home-content .text-2 {
+    font-size: 36px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 22px;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 18px;
+  }
+}
+
 
 /* about section styling */
 
