@@ -395,6 +395,25 @@ section .title::after{
     object-fit: cover;
     border-radius: 6px;
 }
+
+@media (max-width: 768px) {
+  .about .about-content {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+  }
+  .about .about-content .left,
+  .about .about-content .right {
+    width: 100%;
+  }
+
+  .about .about-content .left img {
+    width: 90vw;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
 .about .about-content .right{
     width: 55%;
 }
