@@ -451,62 +451,69 @@ section .title::after{
 }
 
 /* projects section styling */
-.projects, .teams{
-    color:#fff;
-    background: #111;
-}
-.projects .title::before,
-.teams .title::before{
-    background: #fff;
-}
-.projects .title::after,
-.teams .title::after{
-    background: #111;
-    content: "Developed";
-}
-.projects .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.projects, .teams {
+  color: #fff;
+  background: #111;
 }
 
-.projects .serv-content .card:hover{
-    background: darkcyan;
+.projects .title::before,
+.teams .title::before {
+  background: #fff;
 }
-.projects .serv-content .card .box{
-    transition: all 0.4s ease;
+
+.projects .title::after,
+.teams .title::after {
+  background: #111;
+  content: "Developed";
 }
-.projects .serv-content .card:hover .box{
-    transform: scale(1.10);
+
+.projects .serv-content .card {
+  width: calc(33% - 20px);
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 50px 25px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.projects .serv-content .card i{
-    font-size: 50px;
-    color: darkcyan;
-    transition: color 0.3s ease;
+
+.projects .serv-content .card:hover {
+  background: darkcyan;
 }
-.projects .serv-content .card:hover i{
-    color: #fff;
+
+.projects .serv-content .card .box {
+  transition: 0.4s;
 }
-.projects .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
+
+.projects .serv-content .card:hover .box {
+  transform: scale(1.10);
+}
+
+.projects .serv-content .card i {
+  font-size: 50px;
+  color: darkcyan;
+  transition: color 0.3s;
+}
+
+.projects .serv-content .card:hover i {
+  color: #fff;
+}
+
+.projects .serv-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px;
 }
 
 .projects .serv-content .button {
-    background-color: darkcyan;
-    border: none;
-    color: #fff;
-    padding: 10px 12px;
-    border-radius: 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+  background-color: darkcyan;
+  border: none;
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 
