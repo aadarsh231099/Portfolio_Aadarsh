@@ -20,9 +20,24 @@
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar"></div>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
+    
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="https://www.linkedin.com/in/aadarsh-9978091a8/" target="_blank"><span>Aadarsh's
@@ -41,11 +56,9 @@
         </div>
     </nav>
 
-
     <!-- home section start -->
     <section class="home" id="home">
         <div class="max-width">
-
             <div class="home-content">
                 <div class="text-1"> Namaste <span class="iconify" data-icon="noto-v1:folded-hands" data-width="24"
                         data-height="24"></span> , I'm </div><br>
@@ -277,6 +290,7 @@
                             <span><i class="fab fa-node-js icon"></i> NodeJS</span>
                             <span>ReactJS <i class="fab fa-react icon"></i></span>
                         </div>
+                        <div class="line nodejs"></div>
                     </div>
 
                     <div class="bars">
@@ -284,6 +298,7 @@
                             <span><i class="fas fa-code icon"></i> ExpressJS</span>
                             <span>MongoDB <i class="fas fa-leaf icon"></i></span>
                         </div>
+                        <div class="line expressjs"></div>
                     </div>
 
                     <div class="bars">
@@ -291,6 +306,7 @@
                             <span><i class="fas fa-database icon"></i> MySQL</span>
                             <span>PostgreSQL <i class="fas fa-database icon"></i></span>
                         </div>
+                        <div class="line mysql"></div>
                     </div>
 
                     <div class="bars">
@@ -298,6 +314,7 @@
                             <span><i class="fab fa-docker icon"></i> Docker</span>
                             <span>Kubernetes <i class="fa-solid fa-dharmachakra icon"></i></span>
                         </div>
+                        <div class="line docker"></div>
                     </div>
 
                     <div class="bars">
@@ -305,6 +322,7 @@
                             <span><i class="fas fa-network-wired icon"></i> WebSocket</span>
                             <span>JavaScript <i class="fa-brands fa-js icon"></i></span>
                         </div>
+                        <div class="line websocket"></div>
                     </div>
 
                     <div class="bars">
@@ -312,6 +330,7 @@
                             <span><i class="fas fa-code-branch icon"></i> Data Structures</span>
                             <span>Algorithms <i class="fas fa-project-diagram icon"></i></span>
                         </div>
+                        <div class="line dsa"></div>
                     </div>
 
                     <div class="bars">
@@ -319,6 +338,7 @@
                             <span><i class="fas fa-bolt icon"></i> OCPP</span>
                             <span>OCPI <i class="fas fa-exchange-alt icon"></i></span>
                         </div>
+                        <div class="line ocpp"></div>
                     </div>
 
                     <div class="bars">
@@ -326,6 +346,7 @@
                             <span><i class="fab fa-cuttlefish icon"></i> C++</span>
                             <span>Python <i class="fab fa-python icon"></i></span>
                         </div>
+                        <div class="line cpp"></div>
                     </div>
 
                     <div class="bars">
@@ -333,6 +354,7 @@
                             <span><i class="fas fa-memory icon"></i> Redis</span>
                             <span>SQLite <i class="fas fa-database icon"></i></span>
                         </div>
+                        <div class="line redis"></div>
                     </div>
 
                     <div class="bars">
@@ -340,6 +362,7 @@
                             <span><i class="fa-brands fa-html5 icon"></i> HTML</span>
                             <span>CSS <i class="fa-brands fa-css3-alt icon"></i></span>
                         </div>
+                        <div class="line htmlcss"></div>
                     </div>
 
                     <div class="bars">
@@ -347,6 +370,7 @@
                             <span><i class="fab fa-linux icon"></i> Linux</span>
                             <span>GitHub <i class="fab fa-github icon"></i></span>
                         </div>
+                        <div class="line linux"></div>
                     </div>
 
                     <div class="bars">
@@ -354,6 +378,7 @@
                             <span><i class="fa-brands fa-jira icon"></i> Jira</span>
                             <span>JMeter <i class="fas fa-vial icon"></i></span>
                         </div>
+                        <div class="line jira"></div>
                     </div>
 
                     <div class="bars">
@@ -361,6 +386,7 @@
                             <span><i class="fa-brands fa-atlassian icon"></i> Azure</span>
                             <span>Bootstrap <i class="fa-brands fa-bootstrap icon"></i></span>
                         </div>
+                        <div class="line azure"></div>
                     </div>
 
                     <div class="bars">
@@ -368,6 +394,7 @@
                             <span><i class="fas fa-balance-scale icon"></i> Load Balancing</span>
                             <span>Flutter <i class="fab fa-google-play icon"></i></span>
                         </div>
+                        <div class="line loadbalancing"></div>
                     </div>
 
                 </div>
@@ -628,25 +655,71 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message Me</div>
-                    <form action="https://formspree.io/f/mrgdbejy" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/mrgdbejy" method="POST">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" name="name" required>
+                                <input type="text" placeholder="Name" name="name" id="name" required>
+                                <div class="error-message" id="nameError"></div>
                             </div>
                             <div class="field email">
-                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="email" name="email" placeholder="Email" id="email" required>
+                                <div class="error-message" id="emailError"></div>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" name="subject" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" id="subject" required>
+                            <div class="error-message" id="subjectError"></div>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" name="message" placeholder="Message" required></textarea>
+                            <textarea cols="30" rows="10" name="message" placeholder="Message" id="message" required></textarea>
+                            <div class="error-message" id="messageError"></div>
                         </div>
                         <div class="button-area">
-                            <button type="submit">Send</button>
+                            <button type="submit" id="submitBtn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i> Sending...
+                                </span>
+                            </button>
                         </div>
+                        <div class="form-status" id="formStatus"></div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics" id="statistics">
+        <div class="max-width">
+            <div class="stats-container">
+                <div class="stat-item" data-count="25">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Years Old</div>
+                </div>
+                <div class="stat-item" data-count="2.5">
+                    <div class="stat-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item" data-count="15">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item" data-count="1000">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Lines of Code</div>
                 </div>
             </div>
         </div>
@@ -654,10 +727,36 @@
 
     <script src="script.js"></script>
 </body>
+
 <footer class="footer">
-    <p><i class="fas fa-code"></i> Aadarsh's Portfolio Website <i class="fas fa-code"></i></p>
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-248dd5b4-e40d-4ee7-8383-5cdf87162c0d"></div>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Aadarsh's Portfolio</h3>
+            <p>Full-Stack Software Engineer passionate about building innovative solutions.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projectss">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Connect</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/aadarsh-9978091a8/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/aadarsh231099" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/aadarshhanu" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Aadarsh's Portfolio. All rights reserved.</p>
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <div class="elfsight-app-248dd5b4-e40d-4ee7-8383-5cdf87162c0d"></div>
+    </div>
 </footer>
 
 </html>
